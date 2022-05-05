@@ -1,25 +1,11 @@
 import React from 'react';
 
-const Pagination = ({ currentPage, pageCount, onChoosePage }) => {
-    const pageLeft =
-        currentPage - 1 > 0 ? (currentPage - 2 > 0 ? currentPage - 2 : currentPage - 1) : 1;
-    console.log(pageLeft)
-    let pageRight =
-        currentPage - 1 > 0
-            ? currentPage - 2 > 0 ? currentPage + 2 : currentPage + 3
-            : currentPage + 4;
-    console.log(pageRight)
-
-    if (pageRight > pageCount) {
-        pageRight = pageCount;
-    }
-    console.log('pageCount', pageCount)
-
+const Pagination = ({currentPage, pageCount, onChoosePage}) => {
     const pages = [];
-    for (let i = pageLeft; i <= pageRight; i++) {
+
+    for (let i = 1; i <= pageCount; i++) {
         pages.push(i);
     }
-    console.log('pages', pages)
 
     return (
         <div className="paginator">

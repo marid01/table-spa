@@ -107,4 +107,5 @@ export const data = [
     name: 'Даниил',
     distance: 32
   },
+
 ];
