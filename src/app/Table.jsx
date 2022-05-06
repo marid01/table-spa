@@ -23,7 +23,7 @@ function Table({data}) {
                 <tr key={index}>
                     <td>{user.date}</td>
                     <td >{user.name}</td>
-                    <td>{user.amount}</td>
+                    <td>{user.points}</td>
                     <td>{user.distance}</td>
                 </tr>
             ))}
